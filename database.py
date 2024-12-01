@@ -4,8 +4,9 @@ import altair as alt
 
 #CSV into DataFrame
 def tanora_zokiny():
+    url = "https://github.com/UrimThummim0/python-project/blob/main/ivandry_ss_db.csv?raw=true"
     df = pd.read_csv(
-        "/home/ihasina/python-project/ivandry_ss_db.csv",
+        url,
         sep=",",
     )
 
