@@ -20,7 +20,7 @@ def lehibe():
         y_label="isa",
         x="sabata",
         x_label="Sabata",
-        color=["#808080", "#1eff1e"],
+        color=["#808080", "#ffff00"],
         stack=False
     )
 
