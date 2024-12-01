@@ -64,7 +64,7 @@ def zatovo():
         y_label="isa",
         x="sabata",
         x_label="Sabata",
-        color=["#808080", "#ff1e1e"],
+        color=["#808080", "#ff1e10"],
         stack=False
     )
 
