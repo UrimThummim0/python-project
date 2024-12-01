@@ -4,8 +4,14 @@ import pandas as pd
 
 def lehibe():
     url = "https://github.com/UrimThummim0/python-project/blob/main/ivandry_ss_db_lehibe.csv?raw=true"
-    df = pd.read_csv(url, sep=",")
+    local = "ivandry_ss_db_lehibe.csv"
 
+    try :
+        df = pd.read_csv(url, sep=",")
+    except :
+        df = pd.read_csv(local, sep=",")
+
+    
     st.header("Tahan'ny fianarana im-pito.")
     st.subheader("Kilasy Lehibe.")
     st.bar_chart(
@@ -20,7 +26,13 @@ def lehibe():
 
 def tanora_zokiny():
     url = "https://github.com/UrimThummim0/python-project/blob/main/ivandry_ss_db_tanorazokiny.csv?raw=true"
-    df = pd.read_csv(url, sep=",")
+    local = "ivandry_ss_db_tanorazokiny.csv"
+
+    try :
+        df = pd.read_csv(url, sep=",")
+    except :
+        df = pd.read_csv(local, sep=",")
+
 
     st.header("Tahan'ny fianarana im-pito.")
     st.subheader("Kilasy Tanora Zokiny")
@@ -36,7 +48,13 @@ def tanora_zokiny():
 
 def zatovo():
     url = "https://github.com/UrimThummim0/python-project/blob/main/ivandry_ss_db_zatovo.csv?raw=true"
-    df = pd.read_csv(url, sep=",")
+    local = "ivandry_ss_db_zatovo.csv"
+
+    try :
+        df = pd.read_csv(url, sep=",")
+    except :
+        df = pd.read_csv(local, sep=",")
+
 
     st.header("Tahan'ny fianarana im-pito.")
     st.subheader("Kilasy Zatovo")
@@ -52,7 +70,13 @@ def zatovo():
 
 def mantoanto():
     url = "https://github.com/UrimThummim0/python-project/blob/main/ivandry_ss_db_mantoanto.csv?raw=true"
-    df = pd.read_csv(url, sep=",")
+    local = "ivandry_ss_db_mantoanto.csv"
+
+    try :
+        df = pd.read_csv(url, sep=",")
+    except :
+        df = pd.read_csv(local, sep=",")
+
 
     st.header("Tahan'ny fianarana im-pito.")
     st.subheader("Kilasy Mantoanto")
@@ -68,7 +92,13 @@ def mantoanto():
 
 def tanora_zandriny():
     url = "https://github.com/UrimThummim0/python-project/blob/main/ivandry_ss_db_tanorazandriny.csv?raw=true"
-    df = pd.read_csv(url, sep=",")
+    local = "ivandry_ss_db_tanorazandriny.csv"
+
+    try :
+        df = pd.read_csv(url, sep=",")
+    except :
+        df = pd.read_csv(local, sep=",")
+
 
     st.header("Tahan'ny fianarana im-pito.")
     st.subheader("Kilasy Tanora Zandiny")
@@ -84,7 +114,13 @@ def tanora_zandriny():
 
 def ankizy():
     url = "https://github.com/UrimThummim0/python-project/blob/main/ivandry_ss_db_ankizy.csv?raw=true"
-    df = pd.read_csv(url, sep=",")
+    local = "ivandry_ss_db_ankizy.csv"
+
+    try :
+        df = pd.read_csv(url, sep=",")
+    except :
+        df = pd.read_csv(local, sep=",")
+
 
     st.header("Tahan'ny fianarana im-pito.")
     st.subheader("Kilasy Ankizy")
@@ -100,7 +136,13 @@ def ankizy():
 
 def zaza_minono():
     url = "https://github.com/UrimThummim0/python-project/blob/main/ivandry_ss_db_zazaminono.csv?raw=true"
-    df = pd.read_csv(url, sep=",")
+    local = "ivandry_ss_db_zazaminono.csv"
+
+    try :
+        df = pd.read_csv(url, sep=",")
+    except :
+        df = pd.read_csv(local, sep=",")
+
 
     st.header("Tahan'ny fianarana im-pito.")
     st.subheader("Kilasy Zaza Minono")
@@ -116,7 +158,12 @@ def zaza_minono():
 
 def zaza_bodo():
     url = "https://github.com/UrimThummim0/python-project/blob/main/ivandry_ss_db_zazabodo.csv?raw=true"
-    df = pd.read_csv(url, sep=",")
+    local = "ivandry_ss_db_zazabodo.csv"
+
+    try :
+        df = pd.read_csv(url, sep=",")
+    except :
+        df = pd.read_csv(local, sep=",")
 
     st.header("Tahan'ny fianarana im-pito.")
     st.subheader("Kilasy Zaza Bodo")
@@ -130,9 +177,13 @@ def zaza_bodo():
         stack=False
     )
 
-    
+st.title("Tongasoa eto amin'ny fizahana ny :blue[antontan'isa] eto amin'ny Fiangonantsika.")
+
 with st.sidebar:
     st.logo("sda.png")
+    st.text("SDA Ivandry - Dashboard")
+    st.header("Sekoly Sabata", help="Tahan'ny fianarana lesona im-pito nandritry ny telovolana")
+    st.subheader("Telovolana faha-4")
     st.button(label="Lehibe", on_click=lehibe)
     st.button(label="Tanora Zokiny", on_click=tanora_zokiny)
     st.button(label="Zatovo", on_click=zatovo)
